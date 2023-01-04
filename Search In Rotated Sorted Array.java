@@ -22,7 +22,7 @@ public class Solution {
     }
     public static int findPosition(ArrayList<Integer> arr,int n,int k) {
         int pivot = findPivot(arr);
-        if(arr.get(pivot)<=k && arr.get(arr.size()-1)>=k) {
+        if(pivot == 0 || (arr.get(pivot)<=k && arr.get(arr.size()-1)>=k)) {
             return binarySearch(arr,pivot,arr.size()-1,k);
         }
         else{
