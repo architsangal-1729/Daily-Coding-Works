@@ -28,3 +28,22 @@ class Solution {
         return false;
     }
 }
+
+
+//Search in a matrix (GFG)
+
+//Given a matrix mat[][] of size N x M, where every row and column is sorted in increasing order, and a number X is given. The task is to find whether element X is present in the matrix or not.
+
+class Sol
+{
+    public static int matSearch(int arr[][], int n, int m, int X)   {
+        int i=0;
+        int j=m-1;
+        while(i<n && j>=0){
+            if(arr[i][j] == X) return 1;
+            else if(arr[i][j]>X) j--;
+            else i++;
+        }
+        return 0;
+    }
+}
